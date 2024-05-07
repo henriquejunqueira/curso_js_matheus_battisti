@@ -1,7 +1,7 @@
-function lembrarSoma(x){
-    return function(y){
-        return x + y;
-    }
+function lembrarSoma(x) {
+  return function (y) {
+    return x + y;
+  };
 }
 
 let soma1 = lembrarSoma(2);
@@ -12,14 +12,14 @@ let soma2 = lembrarSoma(5);
 
 console.log(soma2(7));
 
-function contador(i){
-    let cont = i;
-    let somarContador = function(){
-        console.log('Valor: ' + cont);
-        cont++;
-    }
+function contador(i) {
+  let cont = i;
+  let somarContador = function () {
+    console.log('Valor: ' + cont);
+    cont++;
+  };
 
-    return somarContador;
+  return somarContador;
 }
 
 let meuContador = contador(5);
@@ -33,3 +33,12 @@ let meuContador2 = contador(1);
 meuContador2();
 meuContador2();
 meuContador2();
+
+function armazenarSoma(x) {
+  return (y) => x + y;
+}
+
+let variavelSoma1 = armazenarSoma(3);
+console.log(soma1(5));
+let variavelSoma2 = armazenarSoma(5);
+console.log(soma2(10));

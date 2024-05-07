@@ -1,12 +1,12 @@
 // Arrow functions são funções anônimas
 let consoleTeste = () => {
-    console.log('Olá mundo!');
+  console.log('Olá mundo!');
 };
 
 consoleTeste();
 
 let soma = (a, b) => {
-    return a + b;
+  return a + b;
 };
 
 console.log(soma(10, 20));
@@ -21,3 +21,15 @@ console.log(soma(10, 20));
 
 // console.log(divisao(3, 0));
 //
+
+let numero = parseInt(prompt('Digite um número: '));
+
+const parOuImpar = (n) => {
+  return n % 2;
+};
+
+if (parOuImpar(numero) === 0) {
+  console.log('É par');
+} else {
+  console.log('É impar');
+}
